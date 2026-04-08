@@ -1,4 +1,6 @@
-package com.example.inventario;
+package com.example.inventario.repositorio;
+
+import com.example.inventario.modelo.Producto;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
