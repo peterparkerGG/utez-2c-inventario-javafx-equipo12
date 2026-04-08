@@ -142,7 +142,7 @@ public class MainController {
     //Este metodo abre la ventana del form para crear o editar, validamos los nulos
     private void abrirFormulario(Producto producto) {
         try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/inventario/vista/FormView.fxml"));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/example/inventario/FormView.fxml"));
             Parent raiz = loader.load();
 
             // Le mandammos al formulario el servicio y si es edición el producto

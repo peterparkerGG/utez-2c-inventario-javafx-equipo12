@@ -28,10 +28,10 @@
     </TableView>
 
     <HBox spacing="10" alignment="CENTER">
-        <Button text="Nuevo" onAction="#onNuevo" prefWidth="100" style="-fx-background-color: #2ecc71; -fx-text-fill: white;"/>
-        <Button text="Editar" onAction="#onEditar" prefWidth="100" style="-fx-background-color: #8800ff; -fx-text-fill: white;"/>
-        <Button text="Eliminar" onAction="#onEliminar" prefWidth="100" style="-fx-background-color: #e74c3c; -fx-text-fill: white;"/>
-        <Button text="Recargar" onAction="#onRecargar" prefWidth="100" style="-fx-background-color: #007bff; -fx-text-fill: white;"/>
+        <Button text="Nuevo" onAction="#onNuevo" prefWidth="100"/>
+        <Button text="Editar" onAction="#onEditar" prefWidth="100"/>
+        <Button text="Eliminar" onAction="#onEliminar" prefWidth="100"/>
+        <Button text="Recargar" onAction="#onRecargar" prefWidth="100"/>
     </HBox>
 </VBox>
 

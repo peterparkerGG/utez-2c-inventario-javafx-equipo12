@@ -15,24 +15,10 @@ public class HelloApplication extends Application {
 
     @Override
     public void start(Stage stage) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("MainView.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("/com/example/inventario/MainView.fxml"));
        Scene scene = new Scene(fxmlLoader.load(), 720, 440);
-        stage.setTitle("Hello!");
+        stage.setTitle("Sistema de Inventario - Tienda");
         stage.setScene(scene);
         stage.show();
     }
 }
-
-
-
-
-//public class HelloApplication extends Application {
-//    @Override
-//    public void start(Stage stage) throws IOException {
-//        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("App-view.fxml"));
-//        Scene scene = new Scene(fxmlLoader.load(), 720, 440);
-//        stage.setTitle("Hello!");
-//        stage.setScene(scene);
-//        stage.show();
-//    }
-//}
