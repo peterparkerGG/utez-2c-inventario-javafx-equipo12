@@ -4,7 +4,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.geometry.Insets?>
 
-<VBox xmlns:fx="http://javafx.com/fxml" fx:controller="com.example.inventario.MainController"
+<VBox xmlns:fx="http://javafx.com/fxml" fx:controller="com.example.inventario.controlador.MainController"
       spacing="10" prefWidth="750" prefHeight="500">
     <padding><Insets top="15" right="15" bottom="15" left="15"/></padding>
 

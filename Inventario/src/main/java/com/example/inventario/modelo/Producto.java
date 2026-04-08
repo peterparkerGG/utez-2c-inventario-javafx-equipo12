@@ -1,5 +1,5 @@
 //Esta clase la usamos para guardar los atributos o cualidades del producto
-package com.example.inventario;
+package com.example.inventario.modelo;
 public class Producto {
 
     // Estos son los atributos del producto
@@ -36,8 +36,8 @@ public class Producto {
     public void setStock(int stock)            { this.stock = stock; }
     public void setCategoria(String categoria) { this.categoria = categoria; }
 
-    // Este metodo convierte el producto a una línea de texto y la separa por comas.
-    // Tambien sirve para guardar el producto en nuestro archivo CSV.
+    // Este método convierte el producto a una línea de texto y la separa por comas.
+    // También sirve para guardar el producto en nuestro archivo CSV.
     @Override
     public String toString() {
         return codigo + "," + nombre + "," + precio + "," + stock + "," + categoria;

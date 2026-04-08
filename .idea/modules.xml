@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/Inventario/Inventario.iml" filepath="$PROJECT_DIR$/Inventario/Inventario.iml" />
       <module fileurl="file://$PROJECT_DIR$/utez-2c-inventario-javafx-equipo12.iml" filepath="$PROJECT_DIR$/utez-2c-inventario-javafx-equipo12.iml" />
     </modules>
   </component>
