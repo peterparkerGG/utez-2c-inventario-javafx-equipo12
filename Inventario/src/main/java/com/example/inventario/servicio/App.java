@@ -11,11 +11,19 @@ import javafx.stage.Stage;
 public class App extends Application {
 
     // Método que JavaFX llama para mostrar la ventana principal
+    @Override
+    public void start(Stage ventanaPrincipal) throws Exception {
+        // Cargamos el diseño de la ventana desde el archivo FXML
+        Parent raiz = FXMLLoader.load(getClass().getResource("/com/example/inventario/MainView.fxml"));
 
+        // Ponemos título y mostramos la ventana
+        ventanaPrincipal.setTitle("Inventario de Productos - Tienda");
+        ventanaPrincipal.setScene(new Scene(raiz));
+        ventanaPrincipal.show();
+    }
 
     // Punto de entrada del programa (Java empieza aquí)
     public static void main(String[] args) {
         launch(args);
     }
-}
 }
