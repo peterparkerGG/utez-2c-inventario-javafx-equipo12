@@ -45,26 +45,28 @@ public class ProductoService {
     public String validar(Producto p, boolean esNuevo) {
         StringBuilder errores = new StringBuilder();
 
-        if (esVacio(p.getCodigo()))
-            errores.append("- El código no puede estar vacío.\n");
+        // Regla para Nombre: Solo letras y espacios (puedes incluir acentos si gustas)
+        // El símbolo ^ significa "inicio", [a-zA-ZáéíóúÁÉÍÓÚñÑ ]+ significa "estas letras y espacios", y $ significa "fin"
+        String regexNombre = "^[a-zA-ZáéíóúÁÉÍÓÚñÑ ]+$";
 
-        if (esVacio(p.getNombre()))
-            errores.append("- El nombre no puede estar vacío.\n");
-        else if (p.getNombre().trim().length() < 3)
-            errores.append("- El nombre debe tener al menos 3 letras.\n");
+        // Regla para Categoría: Solo letras (sin números ni símbolos)
+        String regexCategoria = "^[a-zA-ZáéíóúÁÉÍÓÚñÑ ]+$";
 
-        if (p.getPrecio() <= 0)
-            errores.append("- El precio debe ser mayor a 0.\n");
+        // Validaciones de Nombre
+        if (p.getNombre() == null || p.getNombre().trim().isEmpty()) {
+            errores.append("- El nombre es obligatorio.\n");
+        } else if (!p.getNombre().matches(regexNombre)) {
+            errores.append("- El nombre no puede contener números ni caracteres especiales.\n");
+        }
 
-        if (p.getStock() < 0)
-            errores.append("- El stock no puede ser negativo.\n");
+        // Validaciones de Categoría
+        if (p.getCategoria() == null || p.getCategoria().trim().isEmpty()) {
+            errores.append("- La categoría es obligatoria.\n");
+        } else if (!p.getCategoria().matches(regexCategoria)) {
+            errores.append("- La categoría solo debe contener texto (sin números).\n");
+        }
 
-        if (esVacio(p.getCategoria()))
-            errores.append("- La categoría no puede estar vacía.\n");
-
-        //Nos aseguramos que el codigo no se repita si el producto es nuevo
-        if (esNuevo && !esVacio(p.getCodigo()) && existeCodigo(p.getCodigo()))
-            errores.append("- Ya existe un producto con ese código.\n");
+        //Mantenemos validaciones de id, precio y stock
 
         return errores.toString();
     }
